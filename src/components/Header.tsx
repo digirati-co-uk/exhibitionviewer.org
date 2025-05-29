@@ -13,13 +13,15 @@ export default function Header() {
 				</div>
 				<nav className="flex flex-row items-center text-sm">
 					<Link
-						to="/about"
+						to="/$path"
+						params={{ path: "about" }}
 						className="data-[status=active]:text-blue-700 font-semibold px-2"
 					>
 						About
 					</Link>
 					<Link
-						to="/Examples"
+						to="/$path"
+						params={{ path: "examples" }}
 						className="data-[status=active]:text-blue-700 font-semibold px-2"
 					>
 						Examples
