@@ -2,7 +2,7 @@
 export default {
   content: [
     //
-    './content/**/*.{md,mdx}',
+    './content/**/*.{md,mdx,tsx}',
     './index.html',
     './src/**/*.{html,js,ts,jsx,tsx,css}',
     './node_modules/exhibition-viewer/**/*.js',

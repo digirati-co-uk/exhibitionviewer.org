@@ -22,7 +22,7 @@ function RouteComponent() {
 
 	return (
 		<div className="pt-16">
-			<div className="prose prose-lg">
+			<div className="prose prose-lg m-auto">
 				<Component />
 			</div>
 		</div>

@@ -1,48 +1,57 @@
-import { createFileRoute } from '@tanstack/react-router';
-import { DelftExhibition } from 'exhibition-viewer';
-import 'exhibition-viewer/dist/index.css';
+import { createFileRoute } from "@tanstack/react-router";
+import { DelftExhibition } from "exhibition-viewer";
+import "exhibition-viewer/dist/index.css";
 
-export const Route = createFileRoute('/preview/delft')({
-  component: RouteComponent,
-  validateSearch: (search) => {
-    return {
-      manifest: search.manifest || 'https://heritage.tudelft.nl/iiif/manifests/irrigation-knowledge/manifest.json',
-    };
-  },
+export const Route = createFileRoute("/preview/delft")({
+	component: RouteComponent,
+	validateSearch: (search) => {
+		return {
+			manifest:
+				search.manifest ||
+				"https://heritage.tudelft.nl/iiif/manifests/irrigation-knowledge/manifest.json",
+		};
+	},
 
-  loaderDeps: (opts) => {
-    return {
-      manifest: opts.search.manifest as string,
-    };
-  },
+	loaderDeps: (opts) => {
+		return {
+			manifest: opts.search.manifest as string,
+		};
+	},
 
-  staleTime: 0,
+	staleTime: 0,
 
-  loader: async ({ deps }) => {
-    return fetch(
-      // "https://heritage.tudelft.nl/iiif/manifests/irrigation-knowledge/manifest.json",
-      deps.manifest,
-    ).then((r) => r.json());
-  },
+	loader: async ({ deps }) => {
+		return fetch(
+			// "https://heritage.tudelft.nl/iiif/manifests/irrigation-knowledge/manifest.json",
+			deps.manifest,
+		).then((r) => r.json());
+	},
 });
 
 function RouteComponent() {
-  const search = Route.useSearch();
+	const search = Route.useSearch();
 
-  if (!search.manifest) {
-    return <div>No manifest</div>;
-  }
+	if (!search.manifest) {
+		return <div>No manifest</div>;
+	}
 
-  const manifest = Route.useLoaderData();
-  return (
-    <>
-      <div className="flex w-full flex-col items-center bg-gray-200" data-cut-corners-enabled="false">
-        <div className="min-h-[90vh] w-full max-w-screen-xl px-5 py-10 lg:px-10">
-          <div className="flex w-full flex-col items-center h-full delft-exhibition">
-            <DelftExhibition manifest={manifest} language="en" viewObjectLinks={[]} />
-          </div>
-        </div>
-      </div>
-    </>
-  );
+	const manifest = Route.useLoaderData();
+	return (
+		<>
+			<div
+				className="flex w-full flex-col items-center bg-gray-200"
+				data-cut-corners-enabled="false"
+			>
+				<div className="min-h-[90vh] w-full max-w-screen-xl px-5 py-10 lg:px-10">
+					<div className="flex w-full flex-col items-center h-full delft-exhibition">
+						<DelftExhibition
+							manifest={manifest}
+							language="en"
+							viewObjectLinks={[]}
+						/>
+					</div>
+				</div>
+			</div>
+		</>
+	);
 }
