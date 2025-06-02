@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { DelftExhibition } from "exhibition-viewer";
 import "exhibition-viewer/dist/index.css";
 
-export const Route = createFileRoute("/preview/delft")({
+export const Route = createFileRoute("/preview/delft copy")({
   component: RouteComponent,
   validateSearch: (search) => {
     return {
@@ -39,7 +39,7 @@ function RouteComponent() {
   return (
     <>
       <div
-        className="flex w-full flex-col items-center bg-gray-200"
+        className="flex w-full flex-col items-center bg-white minimal-theme"
         data-cut-corners-enabled="false"
       >
         <div className="min-h-[90vh] w-full max-w-screen-xl px-5 py-10 lg:px-10">

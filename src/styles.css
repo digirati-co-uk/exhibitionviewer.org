@@ -3,75 +3,121 @@
 @tailwind utilities;
 
 body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-		sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-		monospace;
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 :root {
-	/* Base colors */
-	--delft-bg-primary: rgb(229 231 235); /* gray-200 */
-	--delft-bg-secondary: #fff;
-	--delft-bg-overlay: rgba(0, 0, 0, 0.3);
+  /* Base colors */
+  --delft-bg-primary: rgb(229 231 235); /* gray-200 */
+  --delft-bg-secondary: #fff;
+  --delft-bg-overlay: rgba(0, 0, 0, 0.3);
 
-	/* Text colors */
-	--delft-text-primary: #fff;
-	--delft-text-secondary: #000;
-	--delft-image-caption: #fff;
-	--delft-annotation-selected: rgb(250, 204, 21);
+  /* Text colors */
+  --delft-text-primary: #fff;
+  --delft-text-secondary: #000;
+  --delft-image-caption: #fff;
+  --delft-annotation-selected: rgb(250, 204, 21);
 
-	/* UI elements */
-	--delft-control-bar: #6d6e70;
-	--delft-control-bar-border: #5a5b5d;
-	--delft-control-hover: rgba(0, 0, 0, 0.1);
+  /* UI elements */
+  --delft-control-bar: #6d6e70;
+  --delft-control-bar-border: #5a5b5d;
+  --delft-control-hover: rgba(0, 0, 0, 0.1);
 
-	--delft-progress-bar: #fff;
+  --delft-progress-bar: #fff;
 
-	--delft-close-background: #000;
-	--delft-close-background-hover: #373737;
-	--delft-close-text: #fff;
+  --delft-close-background: #000;
+  --delft-close-background-hover: #373737;
+  --delft-close-text: #fff;
 
-	/* Title elements */
-	--delft-title-card: rgb(250 204 21 / var(--tw-bg-opacity, 1)); /* yellow-400 */
-	--delft-title-card-text: #000;
+  /* Title elements */
+  --delft-title-card: rgb(
+    250 204 21 / var(--tw-bg-opacity, 1)
+  ); /* yellow-400 */
+  --delft-title-card-text: #000;
 
-	/* Info blocks */
-	--delft-info-block: #000;
-	--delft-info-block-text: #fff;
+  /* Info blocks */
+  --delft-info-block: #000;
+  --delft-info-block-text: #fff;
 
-	/* Viewer elements */
-	--delft-viewer-background: #373737;
-	--delft-title-transform: uppercase;
+  /* Viewer elements */
+  --delft-viewer-background: #373737;
+  --delft-title-transform: uppercase;
 
-	/** Docs */
-	--sidebar_width: 300px;
-	--content_horizontalPadding: 3rem;
-	--content_verticalPadding: 2rem;
-	--content_width: calc(70ch + (3rem * 2));
-	--gutter-width: max(
-		calc((100vw - var(--content_width)) / 2),
-		var(--sidebar_width)
-	);
+  /** Docs */
+  --sidebar_width: 300px;
+  --content_horizontalPadding: 3rem;
+  --content_verticalPadding: 2rem;
+  --content_width: calc(70ch + (3rem * 2));
+  --gutter-width: max(
+    calc((100vw - var(--content_width)) / 2),
+    var(--sidebar_width)
+  );
 }
 
 .delft-title {
-	text-transform: var(--delft-title-transform);
+  text-transform: var(--delft-title-transform);
 }
 
 .docs-menu {
-	width: var(--gutter-width);
-	justify-content: flex-end;
-	display: flex;
-	height: 100vh;
-	position: fixed;
+  width: var(--gutter-width);
+  justify-content: flex-end;
+  display: flex;
+  height: 100vh;
+  position: fixed;
 }
 .docs-content {
-	padding-left: var(--gutter-width);
+  padding-left: var(--gutter-width);
+}
+
+.minimal-theme {
+  /* Base colors */
+  --delft-bg-primary: #fff;
+  --delft-bg-secondary: #fff;
+  --delft-bg-overlay: rgba(0, 0, 0, 0.3);
+
+  /* Text colors */
+  --delft-text-primary: #000;
+  --delft-text-secondary: #000;
+  --delft-image-caption: #000;
+  --delft-annotation-selected: #303f9f;
+  --delft-title-transform: none;
+
+  /* UI elements */
+  --delft-control-bar: #f9f9f9;
+  --delft-control-bar-border: #000;
+  --delft-control-hover: rgba(0, 0, 0, 0.1);
+
+  --delft-close-background: #fff;
+  --delft-close-background-hover: #eee;
+  --delft-close-text: #000;
+
+  --delft-progress-bar: rgb(0, 0, 0);
+
+  /* Title elements */
+  --delft-title-card: #fff;
+  --delft-title-card-text: #000;
+
+  /* Info blocks */
+  --delft-info-block: #fff;
+  --delft-info-block-text: #000;
+
+  /* Viewer elements */
+  --delft-viewer-background: #e9e9e9;
+}
+
+.minimal-theme .delft-title {
+  font-size: 1.4em;
+}
+
+.minimal-theme .delft-exhibition-viewer > section {
+  @apply mb-32;
 }

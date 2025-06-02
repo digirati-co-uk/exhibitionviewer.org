@@ -16,6 +16,7 @@ import { Route as DocsImport } from './routes/docs'
 import { Route as PathImport } from './routes/$path'
 import { Route as IndexImport } from './routes/index'
 import { Route as DocsIndexImport } from './routes/docs/index'
+import { Route as PreviewMinimalImport } from './routes/preview/minimal'
 import { Route as PreviewDelftImport } from './routes/preview/delft'
 import { Route as DocsDocsPathImport } from './routes/docs/$docsPath'
 
@@ -49,6 +50,12 @@ const DocsIndexRoute = DocsIndexImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => DocsRoute,
+} as any)
+
+const PreviewMinimalRoute = PreviewMinimalImport.update({
+  id: '/preview/minimal',
+  path: '/preview/minimal',
+  getParentRoute: () => rootRoute,
 } as any)
 
 const PreviewDelftRoute = PreviewDelftImport.update({
@@ -109,6 +116,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PreviewDelftImport
       parentRoute: typeof rootRoute
     }
+    '/preview/minimal': {
+      id: '/preview/minimal'
+      path: '/preview/minimal'
+      fullPath: '/preview/minimal'
+      preLoaderRoute: typeof PreviewMinimalImport
+      parentRoute: typeof rootRoute
+    }
     '/docs/': {
       id: '/docs/'
       path: '/'
@@ -140,6 +154,7 @@ export interface FileRoutesByFullPath {
   '/examples': typeof ExamplesRoute
   '/docs/$docsPath': typeof DocsDocsPathRoute
   '/preview/delft': typeof PreviewDelftRoute
+  '/preview/minimal': typeof PreviewMinimalRoute
   '/docs/': typeof DocsIndexRoute
 }
 
@@ -149,6 +164,7 @@ export interface FileRoutesByTo {
   '/examples': typeof ExamplesRoute
   '/docs/$docsPath': typeof DocsDocsPathRoute
   '/preview/delft': typeof PreviewDelftRoute
+  '/preview/minimal': typeof PreviewMinimalRoute
   '/docs': typeof DocsIndexRoute
 }
 
@@ -160,6 +176,7 @@ export interface FileRoutesById {
   '/examples': typeof ExamplesRoute
   '/docs/$docsPath': typeof DocsDocsPathRoute
   '/preview/delft': typeof PreviewDelftRoute
+  '/preview/minimal': typeof PreviewMinimalRoute
   '/docs/': typeof DocsIndexRoute
 }
 
@@ -172,6 +189,7 @@ export interface FileRouteTypes {
     | '/examples'
     | '/docs/$docsPath'
     | '/preview/delft'
+    | '/preview/minimal'
     | '/docs/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -180,6 +198,7 @@ export interface FileRouteTypes {
     | '/examples'
     | '/docs/$docsPath'
     | '/preview/delft'
+    | '/preview/minimal'
     | '/docs'
   id:
     | '__root__'
@@ -189,6 +208,7 @@ export interface FileRouteTypes {
     | '/examples'
     | '/docs/$docsPath'
     | '/preview/delft'
+    | '/preview/minimal'
     | '/docs/'
   fileRoutesById: FileRoutesById
 }
@@ -199,6 +219,7 @@ export interface RootRouteChildren {
   DocsRoute: typeof DocsRouteWithChildren
   ExamplesRoute: typeof ExamplesRoute
   PreviewDelftRoute: typeof PreviewDelftRoute
+  PreviewMinimalRoute: typeof PreviewMinimalRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
@@ -207,6 +228,7 @@ const rootRouteChildren: RootRouteChildren = {
   DocsRoute: DocsRouteWithChildren,
   ExamplesRoute: ExamplesRoute,
   PreviewDelftRoute: PreviewDelftRoute,
+  PreviewMinimalRoute: PreviewMinimalRoute,
 }
 
 export const routeTree = rootRoute
@@ -223,7 +245,8 @@ export const routeTree = rootRoute
         "/$path",
         "/docs",
         "/examples",
-        "/preview/delft"
+        "/preview/delft",
+        "/preview/minimal"
       ]
     },
     "/": {
@@ -248,6 +271,9 @@ export const routeTree = rootRoute
     },
     "/preview/delft": {
       "filePath": "preview/delft.tsx"
+    },
+    "/preview/minimal": {
+      "filePath": "preview/minimal.tsx"
     },
     "/docs/": {
       "filePath": "docs/index.tsx",
