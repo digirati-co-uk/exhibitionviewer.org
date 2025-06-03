@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { DelftExhibition } from "exhibition-viewer";
 import "exhibition-viewer/dist/index.css";
 
-export const Route = createFileRoute("/preview/delft copy")({
+export const Route = createFileRoute("/preview/minimal")({
   component: RouteComponent,
   validateSearch: (search) => {
     return {
