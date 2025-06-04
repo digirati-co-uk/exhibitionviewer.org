@@ -15,8 +15,10 @@ function App() {
           <ExhibitionViewerLogo />
         </div>
         <h1 className="text-5xl font-bold">IIIF Exhibition Viewer</h1>
-        <p className="text-xl">
-          Create Online Exhibitions with your IIIF Content
+        <p className="text-xl max-w-2xl mx-auto">
+          Exhibition Viewer enables the presentation of interactive online
+          exhibitions either as a standalone website or embedded into an
+          existing site.
         </p>
         <div className="inline-flex gap-2">
           <a
@@ -34,7 +36,26 @@ function App() {
         </div>
       </div>
 
-      <div className="max-w-2xl mx-auto flex flex-col gap-4 text-lg mb-16">
+      <div className="max-w-5xl mx-auto">
+        {/* LIST OF FEATURES.  */}
+        <HomepageFeature
+          title="Standalone scrollable web page exhibitions"
+          description="A standard HTML view of the exhibition is available for users to explore, scrolling through the material as it is structured. This enables you to layout your exhibition in a specific order, with additional controls including annotations that enable users to be directed to specific images, regions within images, text or AV content. Users can navigate through that with the ability to interact with each section with a modal view presenting summary information, the full image(s) or AV material."
+          image="/demo-01.png"
+          imageAlt="view of exhibition viewer for delft"
+        />
+
+        <HomepageFeature
+          title="Supports linear and user directed exhibition interaction"
+          description="Users often approach exhibitions with their own ideas about what to explore and in what order. The Exhibition Viewer allows users to navigate quickly to areas of interest in multiple ways, they can scroll ahead and click into the content they want to see; move through curated displays using links, whilst a table of contents provides users with the ability to find and navigate to a specific section of the exhibition."
+          image="/demo-01.png"
+          imageAlt="view of exhibition viewer for delft"
+          imageRight
+        />
+      </div>
+
+      <div className="max-w-5xl mx-auto flex flex-col gap-4 text-lg mb-32">
+        <h2 className="text-2xl font-bold mb-4"></h2>
         <p>
           Exhibition Viewer enables the presentation of interactive online
           exhibitions either as a standalone website or embedded into an
@@ -63,28 +84,14 @@ function App() {
         </p>
       </div>
 
-      {/* LIST OF FEATURES.  */}
-      <HomepageFeature
-        title="Standalone scrollable web page exhibitions"
-        description="A standard HTML view of the exhibition is available for users to explore, scrolling through the material as it is structured. This enables you to layout your exhibition in a specific order, with additional controls including annotations that enable users to be directed to specific images, regions within images, text or AV content. Users can navigate through that with the ability to interact with each section with a modal view presenting summary information, the full image(s) or AV material."
-        image="/demo-01.png"
-        imageAlt="view of exhibition viewer for delft"
-      />
-
-      <HomepageFeature
-        title="Supports linear and user directed exhibition interaction"
-        description="Users often approach exhibitions with their own ideas about what to explore and in what order. The Exhibition Viewer allows users to navigate quickly to areas of interest in multiple ways, they can scroll ahead and click into the content they want to see; move through curated displays using links, whilst a table of contents provides users with the ability to find and navigate to a specific section of the exhibition."
-        image="/demo-01.png"
-        imageAlt="view of exhibition viewer for delft"
-        imageRight
-      />
-
-      <HomepageFeature
-        title="Create your digital exhibitions using IIIF"
-        description="You can develop your exhibitions by creating a new IIIF Manifest, adding the assets and content you want to display. Equally you can construct your exhibition combining content from your existing IIIF content or mixing it with other published IIIF content. The exhibition IIIF Manifest produced can be displayed in other IIIF viewers with standard navigation and display, allowing for its reuse in differing ways on your website or other websites."
-        image="/demo-01.png"
-        imageAlt="view of exhibition viewer for delft"
-      />
+      <div className="max-w-5xl mx-auto">
+        <HomepageFeature
+          title="Create your digital exhibitions using IIIF"
+          description="You can develop your exhibitions by creating a new IIIF Manifest, adding the assets and content you want to display. Equally you can construct your exhibition combining content from your existing IIIF content or mixing it with other published IIIF content. The exhibition IIIF Manifest produced can be displayed in other IIIF viewers with standard navigation and display, allowing for its reuse in differing ways on your website or other websites."
+          image="/demo-01.png"
+          imageAlt="view of exhibition viewer for delft"
+        />
+      </div>
 
       <div>
         <h2 className="text-3xl font-bold mb-8">Examples</h2>
