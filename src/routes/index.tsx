@@ -11,9 +11,9 @@ function App() {
   return (
     <div>
       <div className="py-24 flex flex-col items-center gap-16 mb-16">
-        <div className="text-[10em]">
+        {/* <div className="text-[10em]">
           <ExhibitionViewerLogo />
-        </div>
+        </div> */}
         <h1 className="text-5xl font-bold">IIIF Exhibition Viewer</h1>
         <p className="text-xl max-w-2xl mx-auto">
           Exhibition Viewer enables the presentation of interactive online
