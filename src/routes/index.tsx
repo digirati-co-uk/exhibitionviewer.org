@@ -9,34 +9,34 @@ export const Route = createFileRoute("/")({
 
 function App() {
   return (
-    <div>
-      <div className="py-24 flex flex-col items-center gap-16 mb-16">
+    <div className="min-h-screen">
+      <div className="py-12 md:py-24 px-4 flex flex-col items-center gap-8 md:gap-16 mb-8 md:mb-16">
         {/* <div className="text-[10em]">
           <ExhibitionViewerLogo />
         </div> */}
-        <h1 className="text-5xl font-bold">IIIF Exhibition Viewer</h1>
-        <p className="text-xl max-w-2xl mx-auto">
+        <h1 className="text-3xl md:text-5xl font-bold text-center">IIIF Exhibition Viewer</h1>
+        <p className="text-lg md:text-xl max-w-2xl mx-auto text-center px-4">
           Exhibition Viewer enables the presentation of interactive online
           exhibitions either as a standalone website or embedded into an
           existing site.
         </p>
-        <div className="inline-flex gap-2">
+        <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
           <a
             href="/docs/getting-started"
-            className="bg-blue-900 text-white py-2 px-4 rounded hover:bg-blue-700"
+            className="bg-blue-900 text-white py-2 px-4 rounded hover:bg-blue-700 text-center"
           >
             Get started
           </a>
           <a
             href="/preview/delft"
-            className="text-blue-700 hover:text-blue-500 py-2 px-4 rounded"
+            className="text-blue-700 hover:text-blue-500 py-2 px-4 rounded text-center border border-blue-700 sm:border-0"
           >
             See Example
           </a>
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-5xl mx-auto px-4">
         {/* LIST OF FEATURES.  */}
         <HomepageFeature
           title="Standalone scrollable web page exhibitions"
@@ -54,8 +54,8 @@ function App() {
         />
       </div>
 
-      <div className="max-w-5xl mx-auto flex flex-col gap-4 text-lg mb-32">
-        <h2 className="text-4xl font-bold mb-4 text-center">
+      <div className="max-w-5xl mx-auto px-4 flex flex-col gap-4 text-base md:text-lg mb-16 md:mb-32">
+        <h2 className="text-2xl md:text-4xl font-bold mb-4 text-center">
           Engaging discovery experiences
         </h2>
         <p>
@@ -64,13 +64,13 @@ function App() {
           existing site.
         </p>
         <p>
-          It acts as a IIIF viewer that ‘plays’ exhibitions that are each
-          constructed as a IIIF Manifest with additional ‘behaviours’ that can
+          It acts as a IIIF viewer that 'plays' exhibitions that are each
+          constructed as a IIIF Manifest with additional 'behaviours' that can
           be associated via the IIIF Manifest Editor. Because the exhibition is
           ultimately a IIIF Manifest it is still fully interoperable with any
           IIIF compliant software for wider dissemination and engagement.
         </p>
-        <div className="w-full h-[550px] bg-[rgb(55,55,55)]">
+        <div className="w-full h-[300px] md:h-[550px] bg-[rgb(55,55,55)]">
           <PresenetationPreview
             language="en"
             options={{ autoPlay: true }}
@@ -93,7 +93,7 @@ function App() {
         </p>
       </div>
 
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-5xl mx-auto px-4">
         <HomepageFeature
           title="Create your digital exhibitions using IIIF"
           description="You can develop your exhibitions by creating a new IIIF Manifest, adding the assets and content you want to display. Equally you can construct your exhibition combining content from your existing IIIF content or mixing it with other published IIIF content. The exhibition IIIF Manifest produced can be displayed in other IIIF viewers with standard navigation and display, allowing for its reuse in differing ways on your website or other websites."
@@ -102,9 +102,9 @@ function App() {
         />
       </div>
 
-      <div className="mb-32">
-        <h2 className="text-3xl font-bold mb-8">Examples</h2>
-        <div className="w-full h-[800px] bg-[rgb(55,55,55)]">
+      <div className="mb-16 md:mb-32 px-4 max-w-5xl mx-auto">
+        <h2 className="text-2xl md:text-3xl font-bold mb-8">Examples</h2>
+        <div className="w-full h-[400px] md:h-[800px] bg-[rgb(55,55,55)] rounded-lg overflow-hidden">
           <PresenetationPreview
             language="en"
             options={{ autoPlay: true }}

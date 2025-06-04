@@ -26,5 +26,9 @@ export function PresenetationPreview({
 			</div>
 		);
 
-	return <DelftPresentation manifest={data} viewObjectLinks={[]} {...props} />;
+	return (
+		<div className="w-full h-full overflow-hidden">
+			<DelftPresentation manifest={data} viewObjectLinks={[]} {...props} />
+		</div>
+	);
 }

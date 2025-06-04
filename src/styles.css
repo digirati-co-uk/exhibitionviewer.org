@@ -10,6 +10,34 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: var(--f-font);
+  overflow-x: hidden;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive container utilities */
+.container-responsive {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .container-responsive {
+    padding: 0 2rem;
+  }
 }
 
 code {
@@ -76,8 +104,21 @@ code {
   height: 100vh;
   position: fixed;
 }
-.docs-content {
-  padding-left: var(--gutter-width);
+
+@media (max-width: 768px) {
+  .docs-menu {
+    display: none;
+  }
+  .docs-content {
+    padding-left: 0;
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .docs-content {
+    padding-left: var(--gutter-width);
+  }
 }
 
 .minimal-theme {
@@ -121,5 +162,36 @@ code {
 }
 
 .minimal-theme .delft-exhibition-viewer > section {
-  @apply mb-32;
+  @apply mb-16 md:mb-32;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .minimal-theme .delft-exhibition-viewer > section {
+    @apply mb-8;
+  }
+  
+  /* Reduce spacing on mobile */
+  .py-24 {
+    @apply py-12;
+  }
+  
+  .gap-16 {
+    @apply gap-8;
+  }
+  
+  .mb-32 {
+    @apply mb-16;
+  }
+}
+
+/* Ensure touch-friendly button sizes */
+@media (max-width: 768px) {
+  a[class*="py-2"] {
+    @apply py-3 px-6;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

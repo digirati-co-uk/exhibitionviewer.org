@@ -12,9 +12,9 @@ export function HomepageFeature({
   imageRight?: boolean;
 }) {
   return (
-    <div className="flex lg:flex-row flex-col items-center gap-8 w-full mb-32">
+    <div className="flex lg:flex-row flex-col items-center gap-6 lg:gap-8 w-full mb-16 md:mb-32">
       <div
-        className={`lg:w-1/3 bg-slate-400 shadow aspect-video flex items-center justify-center ${imageRight ? "order-2" : ""}`}
+        className={`w-full lg:w-1/3 bg-slate-400 shadow aspect-video flex items-center justify-center ${imageRight ? "lg:order-2" : ""}`}
       >
         <img
           src={image}
@@ -23,8 +23,8 @@ export function HomepageFeature({
         />
       </div>
       <div className={"flex-1 self-start"}>
-        <h3 className="text-3xl font-bold my-3">{title}</h3>
-        <p className="text-xl max-w-2xl">{description}</p>
+        <h3 className="text-2xl md:text-3xl font-bold my-3">{title}</h3>
+        <p className="text-lg md:text-xl max-w-2xl">{description}</p>
       </div>
     </div>
   );
