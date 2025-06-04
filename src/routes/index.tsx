@@ -65,23 +65,23 @@ function App() {
 
       {/* LIST OF FEATURES.  */}
       <HomepageFeature
-        title="Create Digital Exhibitions"
-        description="IIIF Exhibition Viewer is a tool that allows you to create and view digital Exhibitions."
+        title="Standalone scrollable web page exhibitions"
+        description="A standard HTML view of the exhibition is available for users to explore, scrolling through the material as it is structured. This enables you to layout your exhibition in a specific order, with additional controls including annotations that enable users to be directed to specific images, regions within images, text or AV content. Users can navigate through that with the ability to interact with each section with a modal view presenting summary information, the full image(s) or AV material."
         image="/demo-01.png"
         imageAlt="view of exhibition viewer for delft"
       />
 
       <HomepageFeature
-        title="Create Digital Exhibitions"
-        description="IIIF Exhibition Viewer is a tool that allows you to create and view digital Exhibitions."
+        title="Supports linear and user directed exhibition interaction"
+        description="Users often approach exhibitions with their own ideas about what to explore and in what order. The Exhibition Viewer allows users to navigate quickly to areas of interest in multiple ways, they can scroll ahead and click into the content they want to see; move through curated displays using links, whilst a table of contents provides users with the ability to find and navigate to a specific section of the exhibition."
         image="/demo-01.png"
         imageAlt="view of exhibition viewer for delft"
         imageRight
       />
 
       <HomepageFeature
-        title="Create Digital Exhibitions"
-        description="IIIF Exhibition Viewer is a tool that allows you to create and view digital Exhibitions."
+        title="Create your digital exhibitions using IIIF"
+        description="You can develop your exhibitions by creating a new IIIF Manifest, adding the assets and content you want to display. Equally you can construct your exhibition combining content from your existing IIIF content or mixing it with other published IIIF content. The exhibition IIIF Manifest produced can be displayed in other IIIF viewers with standard navigation and display, allowing for its reuse in differing ways on your website or other websites."
         image="/demo-01.png"
         imageAlt="view of exhibition viewer for delft"
       />
