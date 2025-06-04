@@ -107,11 +107,21 @@ code {
 
 @media (max-width: 768px) {
   .docs-menu {
-    display: none;
+    width: 300px;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   }
   .docs-content {
     padding-left: 0;
-    padding: 1rem;
+  }
+  
+  /* Ensure mobile menu content is scrollable */
+  .docs-menu .w-\[300px\] {
+    height: 100vh;
+    overflow-y: auto;
+    padding-top: 4rem;
   }
 }
 
@@ -183,6 +193,11 @@ code {
   .mb-32 {
     @apply mb-16;
   }
+  
+  /* Mobile menu animations */
+  body.menu-open {
+    overflow: hidden;
+  }
 }
 
 /* Ensure touch-friendly button sizes */
@@ -193,5 +208,12 @@ code {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  
+  /* Mobile menu links */
+  .docs-menu a {
+    display: block;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 }

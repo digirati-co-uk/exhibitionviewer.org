@@ -14,11 +14,13 @@ function App() {
         {/* <div className="text-[10em]">
           <ExhibitionViewerLogo />
         </div> */}
-        <h1 className="text-3xl md:text-5xl font-bold text-center">IIIF Exhibition Viewer</h1>
+        <h1 className="text-3xl md:text-5xl font-bold text-center">
+          Create engaging online exhibitions
+        </h1>
         <p className="text-lg md:text-xl max-w-2xl mx-auto text-center px-4">
-          Exhibition Viewer enables the presentation of interactive online
-          exhibitions either as a standalone website or embedded into an
-          existing site.
+          <strong>Exhibition Viewer</strong> enables the presentation of
+          interactive online exhibitions either as a standalone website or
+          embedded into an existing site.
         </p>
         <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
           <a
@@ -52,48 +54,7 @@ function App() {
           imageAlt="view of exhibition viewer for delft"
           imageRight
         />
-      </div>
 
-      <div className="max-w-5xl mx-auto px-4 flex flex-col gap-4 text-base md:text-lg mb-16 md:mb-32">
-        <h2 className="text-2xl md:text-4xl font-bold mb-4 text-center">
-          Engaging discovery experiences
-        </h2>
-        <p>
-          Exhibition Viewer enables the presentation of interactive online
-          exhibitions either as a standalone website or embedded into an
-          existing site.
-        </p>
-        <p>
-          It acts as a IIIF viewer that 'plays' exhibitions that are each
-          constructed as a IIIF Manifest with additional 'behaviours' that can
-          be associated via the IIIF Manifest Editor. Because the exhibition is
-          ultimately a IIIF Manifest it is still fully interoperable with any
-          IIIF compliant software for wider dissemination and engagement.
-        </p>
-        <div className="w-full h-[300px] md:h-[550px] bg-[rgb(55,55,55)]">
-          <PresenetationPreview
-            language="en"
-            options={{ autoPlay: true }}
-            url="https://heritage.tudelft.nl/iiif/manifests/irrigation-knowledge/manifest.json"
-          />
-        </div>
-        <p>
-          The additional behaviours are interpreted by an Exhibition Viewer
-          Template to provide the look and feel, layout and interaction
-          required. New Templates can be created to match your requirements,
-          this is a very flexible framework that does not impose constraints on
-          the user experience.
-        </p>
-        <p>
-          Some example Template implementations are shown below. You can adopt
-          what has been implemented by these current examples or start from
-          scratch using the documentation provided. The Digirati team also
-          provide services to design and build these exhibitions, please feel
-          free to get in touch!
-        </p>
-      </div>
-
-      <div className="max-w-5xl mx-auto px-4">
         <HomepageFeature
           title="Create your digital exhibitions using IIIF"
           description="You can develop your exhibitions by creating a new IIIF Manifest, adding the assets and content you want to display. Equally you can construct your exhibition combining content from your existing IIIF content or mixing it with other published IIIF content. The exhibition IIIF Manifest produced can be displayed in other IIIF viewers with standard navigation and display, allowing for its reuse in differing ways on your website or other websites."
@@ -102,8 +63,25 @@ function App() {
         />
       </div>
 
-      <div className="mb-16 md:mb-32 px-4 max-w-5xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold mb-8">Examples</h2>
+      <div className="max-w-5xl mx-auto px-4 flex flex-col gap-4 text-base md:text-lg mb-16 md:mb-32">
+        <h2 className="text-2xl md:text-4xl font-bold mb-4 text-center">
+          TUDelft Example
+        </h2>
+        <p>Some text...</p>
+        <div className="w-full h-[400px] md:h-[800px] bg-[rgb(55,55,55)] rounded-lg overflow-hidden">
+          <PresenetationPreview
+            language="en"
+            options={{ autoPlay: true }}
+            url="https://heritage.tudelft.nl/iiif/manifests/irrigation-knowledge/manifest.json"
+          />
+        </div>
+      </div>
+
+      <div className="max-w-5xl mx-auto px-4 flex flex-col gap-4 text-base md:text-lg mb-16 md:mb-32">
+        <h2 className="text-2xl md:text-4xl font-bold mb-4 text-center">
+          IIIF Example
+        </h2>
+        <p>Some text...</p>
         <div className="w-full h-[400px] md:h-[800px] bg-[rgb(55,55,55)] rounded-lg overflow-hidden">
           <PresenetationPreview
             language="en"
