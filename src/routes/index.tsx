@@ -91,8 +91,9 @@ function App() {
           This example from the <strong>Victoria & Albert Museum</strong>, using
           a IIIF manifest created 7 years ago, demonstrates the evolution of
           digital exhibition formats. This shows how the foundational concepts
-          of interactive online exhibitions and has since been incorporated into
-          this viewer - but remain interoperable thanks to IIIF.
+          of interactive online exhibitions have since been incorporated into
+          this viewer, the original Manifest remaining interoperable thanks to
+          IIIF.
         </p>
         <div className="w-full h-[400px] md:h-[640px] bg-[rgb(55,55,55)] rounded-lg overflow-hidden">
           <PresenetationPreview
