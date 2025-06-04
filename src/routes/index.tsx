@@ -9,7 +9,7 @@ export const Route = createFileRoute("/")({
 function App() {
   return (
     <div className="min-h-screen">
-      <div className="py-12 md:py-24 px-4 flex flex-col items-center gap-8 md:gap-16 mb-8 md:mb-16">
+      <div className="py-12 md:py-16 px-4 flex flex-col items-center gap-8 md:gap-16 mb-8 md:mb-16">
         {/* <div className="text-[10em]">
           <ExhibitionViewerLogo />
         </div> */}
