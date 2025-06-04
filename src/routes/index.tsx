@@ -48,14 +48,16 @@ function App() {
         <HomepageFeature
           title="Supports linear and user directed exhibition interaction"
           description="Users often approach exhibitions with their own ideas about what to explore and in what order. The Exhibition Viewer allows users to navigate quickly to areas of interest in multiple ways, they can scroll ahead and click into the content they want to see; move through curated displays using links, whilst a table of contents provides users with the ability to find and navigate to a specific section of the exhibition."
-          image="/demo-01.png"
+          image="/exhibition-viewer-3.jpg"
           imageAlt="view of exhibition viewer for delft"
           imageRight
         />
       </div>
 
       <div className="max-w-5xl mx-auto flex flex-col gap-4 text-lg mb-32">
-        <h2 className="text-2xl font-bold mb-4"></h2>
+        <h2 className="text-4xl font-bold mb-4 text-center">
+          Engaging discovery experiences
+        </h2>
         <p>
           Exhibition Viewer enables the presentation of interactive online
           exhibitions either as a standalone website or embedded into an
@@ -68,6 +70,13 @@ function App() {
           ultimately a IIIF Manifest it is still fully interoperable with any
           IIIF compliant software for wider dissemination and engagement.
         </p>
+        <div className="w-full h-[550px] bg-[rgb(55,55,55)]">
+          <PresenetationPreview
+            language="en"
+            options={{ autoPlay: true }}
+            url="https://heritage.tudelft.nl/iiif/manifests/irrigation-knowledge/manifest.json"
+          />
+        </div>
         <p>
           The additional behaviours are interpreted by an Exhibition Viewer
           Template to provide the look and feel, layout and interaction
@@ -88,18 +97,18 @@ function App() {
         <HomepageFeature
           title="Create your digital exhibitions using IIIF"
           description="You can develop your exhibitions by creating a new IIIF Manifest, adding the assets and content you want to display. Equally you can construct your exhibition combining content from your existing IIIF content or mixing it with other published IIIF content. The exhibition IIIF Manifest produced can be displayed in other IIIF viewers with standard navigation and display, allowing for its reuse in differing ways on your website or other websites."
-          image="/demo-01.png"
+          image="/exhibition-viewer-1.jpg"
           imageAlt="view of exhibition viewer for delft"
         />
       </div>
 
-      <div>
+      <div className="mb-32">
         <h2 className="text-3xl font-bold mb-8">Examples</h2>
-        <div className="w-full h-[650px] bg-[rgb(55,55,55)]">
+        <div className="w-full h-[800px] bg-[rgb(55,55,55)]">
           <PresenetationPreview
             language="en"
             options={{ autoPlay: true }}
-            url="https://heritage.tudelft.nl/iiif/manifests/irrigation-knowledge/manifest.json"
+            url="https://stephenwf.github.io/ocean-liners.json"
           />
         </div>
       </div>

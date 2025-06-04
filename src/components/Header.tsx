@@ -21,7 +21,8 @@ export default function Header() {
               About
             </Link>
             <Link
-              to="/docs"
+              to="/docs/$docsPath"
+              params={{ docsPath: "getting-started" }}
               className="data-[status=active]:text-blue-700 font-semibold px-2"
             >
               Documentation
