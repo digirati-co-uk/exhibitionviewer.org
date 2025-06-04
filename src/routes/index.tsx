@@ -1,4 +1,3 @@
-import { ExhibitionViewerLogo } from "@/components/ExhibitionViewerLogo";
 import { HomepageFeature } from "@/components/HomepageFeature";
 import { PresenetationPreview } from "@/components/PresentationPreview";
 import { createFileRoute } from "@tanstack/react-router";
