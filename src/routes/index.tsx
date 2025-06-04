@@ -28,10 +28,10 @@ function App() {
             Get started
           </a>
           <a
-            href="/examples"
+            href="/preview/delft"
             className="text-blue-700 hover:text-blue-500 py-2 px-4 rounded"
           >
-            See Examples
+            See Example
           </a>
         </div>
       </div>
