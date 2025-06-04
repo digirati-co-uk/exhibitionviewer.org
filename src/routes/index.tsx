@@ -65,10 +65,17 @@ function App() {
 
       <div className="max-w-5xl mx-auto px-4 flex flex-col gap-4 text-base md:text-lg mb-16 md:mb-32">
         <h2 className="text-2xl md:text-4xl font-bold mb-4 text-center">
-          TUDelft Example
+          TU Delft Example
         </h2>
-        <p>Some text...</p>
-        <div className="w-full h-[400px] md:h-[800px] bg-[rgb(55,55,55)] rounded-lg overflow-hidden">
+        <p>
+          This example showcases an interactive digital exhibition from
+          Technical University of Delft's heritage collection, demonstrating how
+          Exhibition Viewer presents archival materials into engaging online
+          experiences. Navigate through historical irrigation knowledge and
+          engineering innovations using intuitive scrolling and interactive
+          annotations.
+        </p>
+        <div className="w-full h-[400px] md:h-[640px] bg-[rgb(55,55,55)] rounded-lg overflow-hidden">
           <PresenetationPreview
             language="en"
             options={{ autoPlay: true }}
@@ -79,10 +86,16 @@ function App() {
 
       <div className="max-w-5xl mx-auto px-4 flex flex-col gap-4 text-base md:text-lg mb-16 md:mb-32">
         <h2 className="text-2xl md:text-4xl font-bold mb-4 text-center">
-          IIIF Example
+          V&A Example
         </h2>
-        <p>Some text...</p>
-        <div className="w-full h-[400px] md:h-[800px] bg-[rgb(55,55,55)] rounded-lg overflow-hidden">
+        <p>
+          This example from the <strong>Victoria & Albert Museum</strong>, using
+          a IIIF manifest created 7 years ago, demonstrates the evolution of
+          digital exhibition formats. This shows how the foundational concepts
+          of interactive online exhibitions and has since been incorporated into
+          this viewer - but remain interoperable thanks to IIIF.
+        </p>
+        <div className="w-full h-[400px] md:h-[640px] bg-[rgb(55,55,55)] rounded-lg overflow-hidden">
           <PresenetationPreview
             language="en"
             options={{ autoPlay: true }}
