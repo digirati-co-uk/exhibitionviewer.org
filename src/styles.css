@@ -41,8 +41,8 @@ img {
 }
 
 code {
-  font-family:
-    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 :root {
@@ -69,9 +69,7 @@ code {
   --delft-close-text: #fff;
 
   /* Title elements */
-  --delft-title-card: rgb(
-    250 204 21 / var(--tw-bg-opacity, 1)
-  ); /* yellow-400 */
+  --delft-title-card: rgb(250 204 21 / var(--tw-bg-opacity, 1)); /* yellow-400 */
   --delft-title-card-text: #000;
 
   /* Info blocks */
@@ -116,7 +114,7 @@ code {
   .docs-content {
     padding-left: 0;
   }
-  
+
   /* Ensure mobile menu content is scrollable */
   .docs-menu .w-\[300px\] {
     height: 100vh;
@@ -180,20 +178,20 @@ code {
   .minimal-theme .delft-exhibition-viewer > section {
     @apply mb-8;
   }
-  
+
   /* Reduce spacing on mobile */
   .py-24 {
     @apply py-12;
   }
-  
+
   .gap-16 {
     @apply gap-8;
   }
-  
+
   .mb-32 {
     @apply mb-16;
   }
-  
+
   /* Mobile menu animations */
   body.menu-open {
     overflow: hidden;
@@ -209,11 +207,16 @@ code {
     align-items: center;
     justify-content: center;
   }
-  
+
   /* Mobile menu links */
   .docs-menu a {
     display: block;
     padding: 0.75rem 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
+}
+
+/** Hack to remove */
+.bg-InfoBlock.text-InfoBlockText {
+  z-index: 20;
 }
