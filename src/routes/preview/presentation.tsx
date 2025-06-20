@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { DelftExhibition, DelftPresentation } from "exhibition-viewer";
+import { DelftPresentation } from "exhibition-viewer";
 import "exhibition-viewer/dist/index.css";
 
 export const Route = createFileRoute("/preview/presentation")({
