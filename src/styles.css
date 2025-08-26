@@ -41,8 +41,8 @@ img {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 :root {
@@ -69,7 +69,9 @@ code {
   --delft-close-text: #fff;
 
   /* Title elements */
-  --delft-title-card: rgb(250 204 21 / var(--tw-bg-opacity, 1)); /* yellow-400 */
+  --delft-title-card: rgb(
+    250 204 21 / var(--tw-bg-opacity, 1)
+  ); /* yellow-400 */
   --delft-title-card-text: #000;
 
   /* Info blocks */
@@ -219,4 +221,8 @@ code {
 /** Hack to remove */
 .bg-InfoBlock.text-InfoBlockText {
   z-index: 20;
+}
+
+.absolute.right-4.top-4.z-20 {
+  z-index: 21;
 }
