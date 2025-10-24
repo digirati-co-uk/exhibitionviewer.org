@@ -14,7 +14,7 @@
     "check": "biome check"
   },
   "resolutions": {
-    "react-iiif-vault": "2.0.2",
+    "react-iiif-vault": "1.5.6",
     "@atlas-viewer/atlas": "2.3.7",
     "@iiif/helpers": "^1.5.4",
     "@iiif/parser": "^2.2.5"
