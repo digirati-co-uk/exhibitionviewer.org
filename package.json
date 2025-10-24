@@ -14,10 +14,10 @@
     "check": "biome check"
   },
   "resolutions": {
-    "react-iiif-vault": "https://pkg.csb.dev/digirati-co-uk/react-iiif-vault/commit/40213b98/react-iiif-vault",
+    "react-iiif-vault": "2.0.2",
     "@atlas-viewer/atlas": "2.3.7",
-    "@iiif/helpers": "^1.4.0",
-    "@iiif/parser": "^2.2.0"
+    "@iiif/helpers": "^1.5.4",
+    "@iiif/parser": "^2.2.5"
   },
   "dependencies": {
     "@contentlayer2/core": "^0.5.8",
@@ -28,7 +28,7 @@
     "@tanstack/router-plugin": "^1.114.3",
     "autoprefixer": "^10.4.21",
     "contentlayer2": "^0.5.8",
-    "exhibition-viewer": "^1.0.9",
+    "exhibition-viewer": "^1.0.10",
     "github-slugger": "^2.0.0",
     "react": "^18",
     "react-dom": "^18",
