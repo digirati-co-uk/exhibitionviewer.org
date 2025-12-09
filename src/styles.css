@@ -11,6 +11,8 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	font-family: var(--f-font);
 	overflow-x: hidden;
+
+	--gutter-width: 300px;
 }
 
 /* Responsive typography */

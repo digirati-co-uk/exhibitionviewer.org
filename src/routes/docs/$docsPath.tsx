@@ -26,7 +26,7 @@ function RouteComponent() {
 	);
 
 	return (
-		<div>
+		<div className="exhibition-viewer">
 			<div className="prose">
 				<Component />
 			</div>
